@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eightball</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+    <h1>Magic Eightball</h1>
+    <div>
+        <img class="displayed" src="{{ url_for('static', filename='clipart2776278.png')}}">
+    </div>
+    <br>
+    <form action="/" method="POST">
+        {% for message in get_flashed_messages()%}
+            <p> {{message}} </p>
+        {% endfor %}
+        <input type="submit" name="submitbutton" value="Shake The EightBall">
+    </form>
+<p>Made by Jimothy</p>
+</body>
+</html>
