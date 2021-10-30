@@ -1,31 +1,102 @@
 body {
-    background-color:rgb(123, 123, 167)   
-    border-style:solid;
-    border-color:red;
+    background-color:rgb(100, 100, 136);   
     }
 
-img.displayed {
-    width:30%;
-    margin: auto;
-    display: block;
-    }
 
-h1 {
+.container {
+    top: 50%;
+    left: 50%;
+    position: relative;
+    height: 448px;
+    width: 449px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -5%)
+    }
+.container img.displayed {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }   
+.reading {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.triangular {
+    position: absolute;
+    z-index: -1;
+    width: 66.666px;
+    height:66.666px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.triangular img {
+    position: absolute;
+    transform: translate(-33.333px, -33.333px);
+}
+
+
+.reading p {
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 75px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 15px;
+    font-family: fantasy;
+
+}
+
+.message {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+h1.title {
+    font-size: 40px;
+    font-family: monospace ;
     text-align: center;
     color:rgb(0, 0, 0);
-    display: block;
-    }
+}
 
 input{
     margin: 0 auto;
-    display: block;
+    transform: translate(0px, 260px);
+    border-radius: 15px;
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    font-family: fantasy;
+    font-style:oblique;
     }
+input:hover {
+    background-color: #740774;
+    border-color: black;
+    border-radius: 15px;
+    border-width: 4px;
+}
+    
 
-form p {
-    text-align:center;
-    color:white;
-    display: block;
-    position: relative;
-    bottom: 225px
-    }
+
+p.sig {
+    size: inherit;
+}
 
