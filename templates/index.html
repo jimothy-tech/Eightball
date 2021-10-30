@@ -5,17 +5,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 </head>
 <body>
-    <h1>Magic Eightball</h1>
-    <div>
-        <img class="displayed" src="{{ url_for('static', filename='clipart2776278.png')}}">
+    <h1 class="title">Magic Eightball</h1>
+    <div class="largecontainer">
+        <div class="container">
+            <img class="displayed" src="{{ url_for('static', filename='clipart2776278.png')}}">
+            <form action="/" method="POST">
+                <div class="reading">
+                    <div class="triangular" style="transform: translate(-50%, -50%) rotate({{ render_degrees }}deg);">
+                         <img src="{{ render_triangle }}">
+                    </div>
+                    <div class="message">
+                        {% for message in get_flashed_messages()%}
+                            <p style="transform: translate(-50%, -50%) rotate({{ render_offset }}deg);"> {{message}} </p>
+                        {% endfor %}   
+                    </div>   
+                </div>
+                <input type="submit" name="submitbutton" value="Shake The EightBall">
+            </form>
+        </div>
     </div>
-    <br>
-    <form action="/" method="POST">
-        {% for message in get_flashed_messages()%}
-            <p> {{message}} </p>
-        {% endfor %}
-        <input type="submit" name="submitbutton" value="Shake The EightBall">
-    </form>
-<p>Made by Jimothy</p>
+<p class="sig">Made by Jimothy</p>
 </body>
 </html>
