@@ -9,10 +9,9 @@ def reader():
     return choice(readings)
    
 def rotate():
-    degrees = randint(-180, -90)
-    text_offset = 135 - abs(degrees)
+    degrees = randint(130, 230)
+    text_offset = abs(degrees) - 180
     return [degrees, text_offset]
-
 
 PHOTO_THING = os.path.join('static', 'uploadimg')
 
@@ -25,8 +24,9 @@ app.config['UPLOAD_FOLDER'] = PHOTO_THING
 def index():
     if request.method == 'POST':
         if request.form.get('submitbutton') == 'Shake The EightBall':
+            #FadeIn_Animation = "animation-name: FadeIn;animation-duration: 2s;transition-timing-function: linear;@keyframes FadeIn 0% opacity: 0;100% opacity: 1;@-moz-keyframes FadeIn 0%; opacity: 0;100% {opacity: 1}}@-o-keyframes FadeIn {0% {opacity: 0}100% {opacity: 1}}@-webkit-keyframes FadeIn {0% {opacity: 0}100% {opacity: 1}}@-ms-keyframes FadeIn {0% {opacity: 0;}100% {opacity: 1;}}"
             list1 = rotate() 
-            photo_retrieve = os.path.join(app.config['UPLOAD_FOLDER'], 'triangle.png')
+            photo_retrieve = os.path.join(app.config['UPLOAD_FOLDER'], 'eightballtriangle.png')
             flash(reader())
             return render_template('index.html', render_triangle = photo_retrieve, render_degrees = list1[0], render_offset = list1[1])
     elif request.method == 'GET':

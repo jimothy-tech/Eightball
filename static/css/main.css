@@ -22,8 +22,8 @@ body {
         transform: translate(-50%, -50%);
       }   
 .reading {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,16 +37,15 @@ body {
 .triangular {
     position: absolute;
     z-index: -1;
-    width: 66.666px;
-    height:66.666px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-135deg);
+    width: 130px;
+    height:130px;
+    transform: rotate(90deg);
 }
 
 .triangular img {
     position: absolute;
-    transform: translate(-33.333px, -33.333px);
+    width: 130px;
+    height: 130px;
 }
 
 
@@ -55,18 +54,18 @@ body {
     position: absolute;
     text-align: center;
     width: 75px;
-    top: 50%;
+    top: 40%;
     left:50%;
     transform: translate(-50%, -50%);
-    color: black;
+    color: whitesmoke;
     font-size: 15px;
     font-family: fantasy;
 
 }
 
 .message {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     z-index: 1;
 }
 
@@ -93,10 +92,3 @@ input:hover {
     border-radius: 15px;
     border-width: 4px;
 }
-    
-
-
-p.sig {
-    size: inherit;
-}
-

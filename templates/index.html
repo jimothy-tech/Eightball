@@ -3,6 +3,7 @@
 <head>
     <title>Eightball</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/FadeIn.css')}}">
 </head>
 <body>
     <h1 class="title">Magic Eightball</h1>
@@ -10,13 +11,13 @@
         <div class="container">
             <img class="displayed" src="{{ url_for('static', filename='clipart2776278.png')}}">
             <form action="/" method="POST">
-                <div class="reading">
-                    <div class="triangular" style="transform: translate(-50%, -50%) rotate({{ render_degrees }}deg);">
+                <div class="reading" style="{{ animation }}">
+                    <div class="triangular" style="transform: rotate({{ render_degrees }}deg);">
                          <img src="{{ render_triangle }}">
                     </div>
-                    <div class="message">
+                    <div class="message" style="transform: rotate({{ render_offset }}deg);">
                         {% for message in get_flashed_messages()%}
-                            <p style="transform: translate(-50%, -50%) rotate({{ render_offset }}deg);"> {{message}} </p>
+                            <p> {{message}} </p>
                         {% endfor %}   
                     </div>   
                 </div>
