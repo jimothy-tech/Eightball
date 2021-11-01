@@ -4,16 +4,23 @@
     <title>Eightball</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/FadeIn.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shake.css')}}">
 </head>
 <body>
     <h1 class="title">Magic Eightball</h1>
     <div class="largecontainer">
+        <div class="links">
+            <form method="POST">
+                <input class="link1" type="submit" name="eightball" value="Eightball">
+                <input class="link2" type="submit" name="about" value="About">
+            </form>
+        </div>
         <div class="container">
-            <img class="displayed" src="{{ url_for('static', filename='clipart2776278.png')}}">
+            <img class="displayed" style="{{ shake }}" src="{{ url_for('static', filename='clipart2776278.png')}}">
             <form action="/" method="POST">
                 <div class="reading" style="{{ animation }}">
                     <div class="triangular" style="transform: rotate({{ render_degrees }}deg);">
-                         <img src="{{ render_triangle }}">
+                         <img src="{{ render_triangle }}" alt="">
                     </div>
                     <div class="message" style="transform: rotate({{ render_offset }}deg);">
                         {% for message in get_flashed_messages()%}
@@ -21,10 +28,11 @@
                         {% endfor %}   
                     </div>   
                 </div>
-                <input type="submit" name="submitbutton" value="Shake The EightBall">
+                <input class="getread" type="submit" name="submitbutton" value="Shake The EightBall">
             </form>
         </div>
     </div>
-<p class="sig">Made by Jimothy</p>
+    
+<p class="sig">Made by Timothy</p>
 </body>
 </html>
