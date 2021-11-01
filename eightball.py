@@ -24,8 +24,8 @@ app.config['UPLOAD_FOLDER'] = PHOTO_THING
 def index():
     if request.method == 'POST':
         if request.form.get('submitbutton') == 'Shake The EightBall':
-            Shake_Animation = "animation-name: Shake;animation-duration: 0.5s;transition-timing-function: linear;"
-            FadeIn_Animation = "animation-name: FadeIn;animation-duration: 2s;transition-timing-function: linear;animation-fill-mode: forwards;animation-delay: 1.5s;"
+            Shake_Animation = "animation-name: Shake;animation-duration: 0.5s;transition-timing-function: linear;animation-delay: .5s;"
+            FadeIn_Animation = "animation-name: FadeIn;animation-duration: 2s;transition-timing-function: linear;animation-fill-mode: forwards;animation-delay: 2s;"
             list1 = rotate() 
             photo_retrieve = os.path.join(app.config['UPLOAD_FOLDER'], 'eightballtriangle.png')
             flash(reader())
