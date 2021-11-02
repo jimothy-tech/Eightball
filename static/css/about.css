@@ -1,11 +1,20 @@
 body {
-    background-color:rgb(100, 100, 136);   
-    }
+    background-color:rgb(100, 100, 136);  
+    margin:0;
+}
 
 .Title {
-    font-family: monospace;
     font-size: 40px;
+    font-family: monospace;
+    width:fit-content;
+    margin:0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
+    color:whitesmoke;
+    background-color: #740774;;
+    border-radius: 10px;
 
 }
 .text {
@@ -13,10 +22,16 @@ body {
     position: absolute;
     max-width: 750px;
     min-width: 350px;
+    height: 300px;
     left: 50%;
-    transform: translateX(-50%);
+    top : 50%;
+    transform: translate(-50%, -50%);
     font-size: large;
     font-family: fantasy;
+    color:whitesmoke;
+    border: solid 3px black;
+    border-radius: 10px;
+    background-color: #740774; 
 }
 
 .links {
@@ -28,6 +43,7 @@ body {
     margin: 0;
     margin-right: 0;
     transform: translateY(-50%);
+    box-shadow: 5px 5px 5px purple;
 }
 
 .link1 {
@@ -44,10 +60,12 @@ body {
     background-color: gray;
     border-color:gray;
     border-style: solid;
+    color: white;
 }   
 
 .links input:hover {
     border-color: black;
     border-width: 4px;
     background-color: #740774;
+    color: black;
 }

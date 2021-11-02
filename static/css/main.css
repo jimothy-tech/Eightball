@@ -1,7 +1,19 @@
+html {
+    width:100%;
+    height:100%;
+}
+
 body {
     background-color:rgb(100, 100, 136);   
     }
 
+.largecontainer {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%
+}
 
 .container {
     top: 50%;
@@ -12,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(-50%, -5%)
+    transform: translateX(-50%)
     }
 .container img.displayed {
         margin: 0;
@@ -73,8 +85,15 @@ body {
 h1.title {
     font-size: 40px;
     font-family: monospace;
+    width:fit-content;
+    margin:0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    color:rgb(0, 0, 0);
+    color:whitesmoke;
+    background-color: #740774;;
+    border-radius: 10px;
 }
 
 .getread{
@@ -87,12 +106,18 @@ h1.title {
     font-family: fantasy;
     font-style:oblique;
     background-color: gray;
+    color: whitesmoke;
+    border-style: solid;
+    box-shadow: 5px 5px 5px purple;
+
     }
 .getread:hover {
     background-color: #740774;
     border-color: black;
     border-radius: 15px;
     border-width: 4px;
+    color:black;
+
 }
 
 .links {
@@ -104,6 +129,7 @@ h1.title {
     margin: 0;
     margin-right: 0;
     transform: translateY(-50%);
+    box-shadow: 5px 5px 5px purple
 }
 
 .link1 {
@@ -120,10 +146,23 @@ h1.title {
     background-color: gray;
     border-color:gray;
     border-style: solid;
+    color: whitesmoke;
 }   
 
 .links input:hover {
     border-color: black;
     border-width: 4px;
     background-color: #740774;
+    color: black
+}
+
+.sig {
+    width:fit-content;
+    position: absolute;
+    margin: 0;
+    color: whitesmoke;
+    background-color:#740774 ;
+    border-radius: 5px;
+    bottom: 5%;
+    right: 5%;
 }
