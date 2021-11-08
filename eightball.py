@@ -21,7 +21,7 @@ app.secret_key = "ramen"
 app.config['UPLOAD_FOLDER'] = PHOTO_THING
 
 @app.route("/shake", methods=["POST", "GET"])
-def 8ball():
+def index():
     if request.method == 'POST':
         if request.form.get('submitbutton') == 'Shake The EightBall':
             Shake_Animation = "animation-name: Shake;animation-duration: 0.5s;transition-timing-function: linear;animation-delay: .5s;"
