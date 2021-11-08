@@ -22,7 +22,7 @@ app.config['UPLOAD_FOLDER'] = PHOTO_THING
 
 
 @app.route("/", methods=["POST", "GET"])
-=======
+
 @app.route("/shake", methods=["POST", "GET"])
 
 def index():
