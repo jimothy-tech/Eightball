@@ -20,7 +20,7 @@ app.secret_key = "ramen"
 
 app.config['UPLOAD_FOLDER'] = PHOTO_THING
 
-@app.route("/8ball", methods=["POST", "GET"])
+@app.route("/shake", methods=["POST", "GET"])
 def 8ball():
     if request.method == 'POST':
         if request.form.get('submitbutton') == 'Shake The EightBall':
@@ -38,7 +38,7 @@ def 8ball():
         initial_property  = "opacity: 0;"
         photo_retrieve = os.path.join(app.config['UPLOAD_FOLDER'], 'eightballtriangle.png')
         return render_template('index.html', render_triangle = photo_retrieve, animation = initial_property)
-@app.route("/8ball/about", methods=['POST', 'GET'])
+@app.route("/about", methods=['POST', 'GET'])
 def about():
     if request.method == 'POST':
         if request.form.get('eightball') == 'Eightball':
