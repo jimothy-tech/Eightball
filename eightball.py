@@ -20,11 +20,11 @@ app.secret_key = "ramen"
 
 app.config['UPLOAD_FOLDER'] = PHOTO_THING
 
-<<<<<<< HEAD
+
 @app.route("/", methods=["POST", "GET"])
 =======
 @app.route("/shake", methods=["POST", "GET"])
->>>>>>> f41ae152c6826cae110213d970e370b9994c86ef
+
 def index():
     if request.method == 'POST':
         if request.form.get('submitbutton') == 'Shake The EightBall':
